@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="big_button_style">
+        <item name="android:layout_width">@dimen/standart_button_width</item>
+        <item name="android:layout_height">@dimen/standart_button_height</item>
+        <item name="android:layout_margin">@dimen/normal_margin</item>
+        <item name="android:textSize">@dimen/big_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="hole_style">
+        <item name="android:layout_width">@dimen/hole_size</item>
+        <item name="android:layout_height">@dimen/hole_size</item>
+        <item name="android:layout_margin">@dimen/large_margin</item>
+        <item name="android:background">@drawable/hole</item>
+        <item name="android:textSize">0sp</item>
+    </style>
+
+    <style name="big_text_font_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/sunny_spells_regular</item>
+        <item name="android:textSize">@dimen/very_big_text_size</item>
+        <item name="android:textColor">@color/colorYellow</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_margin">@dimen/normal_margin</item>
+    </style>
+</resources>

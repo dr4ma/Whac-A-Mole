@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standart_button_width">250dp</dimen>
+    <dimen name="standart_button_height">80dp</dimen>
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="large_margin">25dp</dimen>
+    <dimen name="big_text_size">20sp</dimen>
+    <dimen name="hole_size">70sp</dimen>
+    <dimen name="very_big_text_size">50sp</dimen>
+</resources>

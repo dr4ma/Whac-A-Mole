@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.GameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/holes_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/btn_1"
+            style="@style/hole_style"
+            android:text="1"
+            android:background="@drawable/hole"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btn_2"
+            style="@style/hole_style"
+            android:text="2"
+            app:layout_constraintStart_toEndOf="@id/btn_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btn_3"
+            style="@style/hole_style"
+            android:text="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/btn_4"
+            style="@style/hole_style"
+            android:text="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_1" />
+
+        <TextView
+            android:id="@+id/btn_5"
+            style="@style/hole_style"
+            android:text="5"
+            app:layout_constraintStart_toEndOf="@id/btn_4"
+            app:layout_constraintTop_toBottomOf="@id/btn_2" />
+
+        <TextView
+            android:id="@+id/btn_6"
+            style="@style/hole_style"
+            android:text="6"
+            app:layout_constraintStart_toEndOf="@id/btn_5"
+            app:layout_constraintTop_toBottomOf="@id/btn_3" />
+
+
+        <TextView
+            android:id="@+id/btn_7"
+            style="@style/hole_style"
+            android:text="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_4" />
+
+        <TextView
+            android:id="@+id/btn_8"
+            style="@style/hole_style"
+            android:text="8"
+            app:layout_constraintStart_toEndOf="@id/btn_7"
+            app:layout_constraintTop_toBottomOf="@id/btn_5" />
+
+        <TextView
+            android:id="@+id/btn_9"
+            style="@style/hole_style"
+            android:text="9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_8"
+            app:layout_constraintTop_toBottomOf="@id/btn_6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/view_record"
+            style="@style/big_text_font_style"
+            android:text="@string/record"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_record"
+            style="@style/big_text_font_style"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_record"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/holes_container">
+
+        <TextView
+            android:id="@+id/view_count"
+            style="@style/big_text_font_style"
+            android:text="@string/score"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_count"
+            style="@style/big_text_font_style"
+            android:text="0"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_count"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/timer"
+        style="@style/big_text_font_style"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/holes_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="00:00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
