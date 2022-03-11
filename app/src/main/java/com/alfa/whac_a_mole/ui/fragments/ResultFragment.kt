@@ -14,7 +14,6 @@ class ResultFragment : Fragment() {
 
     private var binding : FragmentResultBinding? = null
     private val mBinding get() = binding!!
-    private val data = Data()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +25,9 @@ class ResultFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        APP_ACTIVITY.title = getString(R.string.result)
+        APP_ACTIVITY.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        APP_ACTIVITY.supportActionBar?.setDisplayShowHomeEnabled(false)
         init()
     }
 
@@ -36,7 +38,8 @@ class ResultFragment : Fragment() {
 
     private fun init(){
         binding?.apply {
-            textResult.text = data.poits.toString()
+
+            textResult.text = arguments?.getString("arg")
             btnMenu.setOnClickListener {
                 APP_ACTIVITY.mNavController.navigate(R.id.action_resultFragment_to_startFragment)
             }

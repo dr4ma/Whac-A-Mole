@@ -37,4 +37,9 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         binding = null
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }

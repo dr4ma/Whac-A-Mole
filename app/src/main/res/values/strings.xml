@@ -8,4 +8,5 @@
     <string name="record">Record</string>
     <string name="score">Score</string>
     <string name="again">Again</string>
+    <string name="result">Result</string>
 </resources>

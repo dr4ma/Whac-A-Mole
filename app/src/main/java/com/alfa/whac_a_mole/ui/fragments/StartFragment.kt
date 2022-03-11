@@ -28,6 +28,8 @@ class StartFragment : Fragment() {
         super.onStart()
 
         APP_ACTIVITY.title = getString(R.string.menu)
+        APP_ACTIVITY.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        APP_ACTIVITY.supportActionBar?.setDisplayShowHomeEnabled(false)
         mBinding.btnPlay.setOnClickListener {
             APP_ACTIVITY.mNavController.navigate(R.id.action_startFragment_to_gameFragment)
         }
