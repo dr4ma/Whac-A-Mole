@@ -19,7 +19,7 @@
             style="@style/big_text_font_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Result:"
+            android:text="@string/score"
             app:layout_constraintEnd_toEndOf="parent"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,23 +31,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="0"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/view_result"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             />
 
-        <Button
-            android:id="@+id/btn_menu"
-            style="@style/big_button_style"
-            app:layout_constraintStart_toStartOf="parent"
+        <TextView
+            android:id="@+id/view_record"
+            style="@style/big_text_font_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/record"
+            android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/text_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <TextView
+            android:id="@+id/text_record"
+            style="@style/big_text_font_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/view_record"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_menu"
+            style="@style/big_btn_style"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_record"
             app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/menu"
             />
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_again"
-            style="@style/big_button_style"
+            style="@style/big_btn_style"
+            app:cornerRadius="@dimen/btn_corner_radius"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_menu"
             app:layout_constraintEnd_toEndOf="parent"

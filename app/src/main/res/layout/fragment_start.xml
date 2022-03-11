@@ -6,13 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.StartFragment">
 
-    <Button
-        android:id="@+id/btn_play"
-        android:text="@string/play"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/big_button_style" />
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_play"
+            android:text="@string/play"
+            app:cornerRadius="@dimen/btn_corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/big_btn_style" />
+
+        <TextView
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:text="@string/rules"
+            android:gravity="center"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/colorTextHint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_play"
+            android:layout_margin="@dimen/large_margin"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

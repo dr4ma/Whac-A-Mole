@@ -1,5 +1,7 @@
 package com.alfa.whac_a_mole.ui.fragments
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,8 +10,7 @@ import android.view.ViewGroup
 import com.alfa.whac_a_mole.R
 import com.alfa.whac_a_mole.databinding.FragmentGameBinding
 import com.alfa.whac_a_mole.logic.Data
-import com.alfa.whac_a_mole.utilits.APP_ACTIVITY
-import com.alfa.whac_a_mole.utilits.showToast
+import com.alfa.whac_a_mole.utilits.*
 import kotlinx.android.synthetic.main.fragment_game.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -53,13 +54,14 @@ class GameFragment : Fragment() {
     }
 
     private fun onSuccess(){
-        showToast("Result")
-        bundle.putString("arg", points.toString())
+        bundle.putInt("arg", points)
         APP_ACTIVITY.mNavController.navigate(R.id.action_gameFragment_to_resultFragment, bundle)
         bundle.clear()
     }
+
     private fun init() {
         binding?.apply {
+            textRecord.text = getRecord().toString()
             btn1.setOnClickListener {
                 val str = btn1.text.toString()
                 if (str.toInt() == data.numberHole) {

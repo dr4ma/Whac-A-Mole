@@ -9,4 +9,7 @@
     <string name="score">Score</string>
     <string name="again">Again</string>
     <string name="result">Result</string>
+    <string name="rules">Правила игры: на игровом поле находятся 9 лунок. Раз в 0,5 секунд в одной рандомной лунке появляется крот. Если успеть по нему попасть, то Вы заработаете 1 балл. Игра длится 30 секунд. Удачи!</string>
+    <string name="time_label">Time:</string>
+    <string name="new_record">Поздравляем, у Вас новый рекорд!</string>
 </resources>

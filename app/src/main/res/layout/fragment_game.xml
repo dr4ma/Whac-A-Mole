@@ -18,8 +18,8 @@
         <TextView
             android:id="@+id/btn_1"
             style="@style/hole_style"
-            android:text="1"
             android:background="@drawable/hole"
+            android:text="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,6 +89,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/holes_container"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
@@ -112,9 +113,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal_margin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/holes_container">
+        app:layout_constraintTop_toBottomOf="@id/label_timer">
 
         <TextView
             android:id="@+id/view_count"
@@ -137,14 +138,23 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/timer"
+        android:id="@+id/label_timer"
         style="@style/big_text_font_style"
-        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/holes_container"
+        android:text="@string/time_label"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/timer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer"
+        style="@style/big_text_font_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="00:00" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="00" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
