@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         mToolbar = mBinding.toolbar
         mNavController = Navigation.findNavController(APP_ACTIVITY, R.id.nav_host_fragment)
         setSupportActionBar(mToolbar)
-        title = getString(R.string.game)
     }
 
     override fun onDestroy() {

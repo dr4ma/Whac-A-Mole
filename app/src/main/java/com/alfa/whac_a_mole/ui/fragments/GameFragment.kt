@@ -11,6 +11,7 @@ import com.alfa.whac_a_mole.R
 import com.alfa.whac_a_mole.databinding.FragmentGameBinding
 import com.alfa.whac_a_mole.logic.Data
 import com.alfa.whac_a_mole.utilits.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_game.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -35,11 +36,11 @@ class GameFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
+        points = 0
         init()
-        APP_ACTIVITY.title = getString(R.string.game)
+        APP_ACTIVITY.title_toolbar.text = getString(R.string.game)
         APP_ACTIVITY.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         APP_ACTIVITY.supportActionBar?.setDisplayShowHomeEnabled(true)
-        points = 0
             CoroutineScope(Dispatchers.Main).launch {
                 data.startCountDownTimer(30000, timer, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9){
                     onSuccess()
@@ -47,9 +48,13 @@ class GameFragment : Fragment() {
             }
     }
 
+    override fun onStop() {
+        super.onStop()
+        data.cancelCountDownTimer()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
-        data.cancelCountDownTimer()
         binding = null
     }
 
@@ -61,6 +66,7 @@ class GameFragment : Fragment() {
 
     private fun init() {
         binding?.apply {
+            textCount.text = points.toString()
             textRecord.text = getRecord().toString()
             btn1.setOnClickListener {
                 val str = btn1.text.toString()

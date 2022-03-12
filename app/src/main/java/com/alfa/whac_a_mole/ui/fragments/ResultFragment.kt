@@ -12,6 +12,7 @@ import com.alfa.whac_a_mole.utilits.APP_ACTIVITY
 import com.alfa.whac_a_mole.utilits.getRecord
 import com.alfa.whac_a_mole.utilits.putNewRecordValue
 import com.alfa.whac_a_mole.utilits.showToast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class ResultFragment : Fragment() {
 
@@ -29,7 +30,8 @@ class ResultFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        APP_ACTIVITY.title = getString(R.string.result)
+
+        APP_ACTIVITY.title_toolbar.text = getString(R.string.result)
         APP_ACTIVITY.supportActionBar?.setDisplayHomeAsUpEnabled(false)
         APP_ACTIVITY.supportActionBar?.setDisplayShowHomeEnabled(false)
         init()

@@ -42,7 +42,7 @@
             style="@style/big_text_font_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/record"
+            android:text="@string/record"
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/text_result"
             app:layout_constraintEnd_toEndOf="parent"

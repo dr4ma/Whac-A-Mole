@@ -13,10 +13,20 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorWhite"
         android:textAlignment="center"
+        app:title=" "
         android:theme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Menu"
+            style="@style/big_text_font_style"
+            android:textColor="@color/black"
+            android:textSize="@dimen/big_text_size"
+            android:layout_gravity="center"/>
     </androidx.appcompat.widget.Toolbar>
 
     <fragment
