@@ -3,6 +3,9 @@ package com.alfa.whac_a_mole.utilits
 import android.content.Context
 import android.content.SharedPreferences
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import com.alfa.whac_a_mole.R
 
 fun showToast(message: String){
@@ -18,4 +21,12 @@ fun putNewRecordValue(value : Int){
     val editor : SharedPreferences.Editor = sharedPref.edit()
     editor.putInt(KEY_NAME, value)
     editor.commit()
+}
+
+fun Fragment.clearBackStack(){
+    val fragments = APP_ACTIVITY.supportFragmentManager.fragments
+    for(fragment in fragments){
+        APP_ACTIVITY.supportFragmentManager.beginTransaction().remove(fragment).commit()
+    }
+    APP_ACTIVITY.supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
 }

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.alfa.whac_a_mole.R
 import com.alfa.whac_a_mole.databinding.FragmentStartBinding
 import com.alfa.whac_a_mole.utilits.APP_ACTIVITY
+import com.alfa.whac_a_mole.utilits.clearBackStack
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_start.*
 
@@ -27,7 +28,7 @@ class StartFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-
+        //clearBackStack()
         APP_ACTIVITY.title_toolbar.text = getString(R.string.menu)
         APP_ACTIVITY.supportActionBar?.setDisplayHomeAsUpEnabled(false)
         APP_ACTIVITY.supportActionBar?.setDisplayShowHomeEnabled(false)
