@@ -30,4 +30,11 @@
         <item name="android:layout_margin">@dimen/normal_margin</item>
         <item name="android:layout_height">@dimen/standart_button_height</item>
     </style>
+
+    <style name="splashScreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+        <item name="android:layout_width">@dimen/icon_width</item>
+        <item name="android:layout_height">@dimen/icob_height</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+    </style>
 </resources>
