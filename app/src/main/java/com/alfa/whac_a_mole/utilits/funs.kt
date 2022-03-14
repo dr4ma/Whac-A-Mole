@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -27,7 +28,7 @@ fun putNewRecordValue(value: Int) {
         APP_ACTIVITY.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
     val editor: SharedPreferences.Editor = sharedPref.edit()
     editor.putInt(KEY_NAME, value)
-    editor.commit()
+    editor.apply()
 }
 
 fun AppCompatActivity.startActivityMain(context: Context) {

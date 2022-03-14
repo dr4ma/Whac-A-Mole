@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Whac-A-Mole</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="play">Play</string>
     <string name="menu">Menu</string>
@@ -9,7 +8,9 @@
     <string name="score">Score</string>
     <string name="again">Again</string>
     <string name="result">Result</string>
-    <string name="rules">Правила игры: на игровом поле находятся 9 лунок. Раз в 0,5 секунд в одной рандомной лунке появляется крот. Если успеть по нему попасть, то Вы заработаете 1 балл. Игра длится 30 секунд. Удачи!</string>
+    <string name="rules">Rules of the game: there are 9 holes on the playing field. Once every 0.5 seconds, a mole appears in one random hole. If you manage to get on it, then you will earn 1 point. The game goes on for 30 seconds. Good luck!</string>
     <string name="time_label">Time:</string>
-    <string name="new_record">Поздравляем, у Вас новый рекорд!</string>
+    <string name="new_record">Congratulations, you have a new record!</string>
+    <string name="nullable_record">Clear record</string>
+    <string name="record_is_null">Record is cleared</string>
 </resources>

@@ -15,6 +15,7 @@ class Data {
     private var seconds: Long = 0
     var numberHole: Int = 0
 
+    // Инициализация таймера
     suspend fun startCountDownTimer(
         timeMillis: Long,
         view: TextView,
@@ -31,7 +32,7 @@ class Data {
     ) {
         numberHole = 0
         timer?.cancel()
-        timer = object : CountDownTimer(timeMillis, 500) {
+        timer = object : CountDownTimer(timeMillis, 600) {
             override fun onTick(time: Long) {
 
                 seconds = time / 1000
@@ -50,7 +51,7 @@ class Data {
 
                 when (numberHole) {
                     1 -> btn1.setBackgroundResource(R.drawable.mole)
-                        2 -> btn2.setBackgroundResource(R.drawable.mole)
+                    2 -> btn2.setBackgroundResource(R.drawable.mole)
                     3 -> btn3.setBackgroundResource(R.drawable.mole)
                     4 -> btn4.setBackgroundResource(R.drawable.mole)
                     5 -> btn5.setBackgroundResource(R.drawable.mole)
@@ -60,11 +61,10 @@ class Data {
                     9 -> btn9.setBackgroundResource(R.drawable.mole)
                 }
             }
-
             override fun onFinish() {
+                // Лямбда для обработки события окончания таймера (занесение очков в bundle и переход в другой фрагмент)
                 onSuccess()
             }
-
         }.start()
     }
 
